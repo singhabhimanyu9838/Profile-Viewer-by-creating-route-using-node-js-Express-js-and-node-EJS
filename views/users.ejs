@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="leftArr"><i style="font-size: 30px;" class="fa-solid fa-arrow-left"></i></div>
+        <div class="mid">
+            <h2></i>
+                <%= data.name %>
+            </h2>
+        </div>
+        <div class="right"><i style="font-size: 30px;" class="fa-solid fa-ellipsis"></i></div>
+    </div>
+
+    <div class="user">
+        <div class="photo"><img src="<%=data.dp%>"
+                alt="connection Error"></div>
+
+        <div class="post">
+            <div class="postN">
+                <h4>Posts</h4>
+            </div>
+            <div class="Postn">
+                <%= data.noPost %>
+            </div>
+        </div>
+        <div class="follower">
+            <div class="followerN">
+                <h4>Followers</h4>
+            </div>
+            <div class="followern">
+                <%= data.followers %>
+            </div>
+        </div>
+        <div class="following">
+            <div class="followingN">
+                <h4>Following</h4>
+            </div>
+            <div class="followingn">
+                <%= data.followings %>
+            </div>
+        </div>
+    </div>
+    <button id="follow-button" onclick="toggleFollow()" >Follow</button>
+
+    <div class="buttom">
+        <div class="postI" id="postI">
+            <div><i class="fa-solid fa-film"></i></div>
+            <div id="oldline" class="underline"></div>
+        </div>
+        <div class="followerlist" id="followerlist">
+            <div><i class="fa-solid fa-user"></i></i></div>
+            <div id="underline1" class="underline1 hidden"></div>
+        </div>
+    </div>
+
+    <div  id="pst" class="pst">
+
+        <%for(let post of data.posts){%>
+            <div style="display: flex;flex-direction: column;">
+                <img style="width: 350px;height: 350px; 
+                    border-radius: 5px;" src="<%=post.image%>" alt="">
+                <p style="text-align: center;"><i style="color:rgb(168, 6, 6);" class="fa-solid fa-heart">&nbsp;</i>
+                    <%=post.likes %>&nbsp;&nbsp;&nbsp;
+                        <i style="color: rgb(15, 163, 32);" class="fa-solid fa-comment"></i>&nbsp;<%= post.comments %>
+                </p>
+            </div>
+            <%}%>
+    </div>
+
+    <div id="friend" class="friend hidden">
+        <%for(let follower of data.followerList){%>
+            <div style="display: flex;
+            align-items: center; justify-content: space-around;
+            flex-direction: row;background-color: #f4f4f4;gap: 5px;margin: 15px; padding: 5px; ">
+                <img src="<%=follower.image%>" alt="">
+                <h2>
+                    <%=follower.name %>
+                </h2>
+                <button class="follow" onclick="Follow(this)" style="width: 200px;">Follow</button>
+
+            </div>
+            <%}%>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+</html>

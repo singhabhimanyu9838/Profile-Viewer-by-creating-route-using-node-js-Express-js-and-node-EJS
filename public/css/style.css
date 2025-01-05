@@ -1,0 +1,113 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.leftArr{
+    justify-content: center;
+    align-items: center;
+}
+.mid{
+    font-size: larger;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.user .photo {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+img:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
+i:hover{
+    cursor: pointer;
+}
+button{
+    height: 30px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 90%;
+    background:rgb(57, 57, 214) ;
+    /* background:#0e0e7a ; */
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.buttom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top:30px ;
+}
+.buttom .underline{
+    margin-bottom: 10px;
+    border: 2px solid black;
+    width: 100%;
+}
+.buttom .followerlist .underline1{
+    margin-bottom: 10px;
+    border: 2px solid black;
+    width: 100%;
+}
+.buttom .postI{
+    margin-bottom: 10px;
+    text-align: center;
+    width: 50%;
+}
+.buttom .postI div{
+    margin-bottom: 10px;
+}
+.buttom .postI div i{
+    font-size: 30px;
+}
+.buttom .followerlist div{
+    margin-bottom: 10px;
+}
+.buttom .followerlist div i{
+    font-size: 30px;
+}
+.followerlist{
+    text-align: center;
+    width: 50%;
+}
+.followerlist .underline1{
+    margin-bottom: 10px;
+    border: 2px solid rgb(238, 232, 232);
+    width: 100%;
+}
+.noPost{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+}
+.pst{
+    display: flex;
+       flex-wrap: wrap;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: space-around;
+      background-color: #f4f4f4;
+       padding: 10px;
+}
+.hidden{
+    display: none;
+}

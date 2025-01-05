@@ -1,0 +1,6 @@
+<div class="friendList" style="display: flex; flex-direction: row; justify-content: space-between;">
+   <% for(let follower of data.followerList){%>
+        <img src="<%=follower.image%>" alt="">
+   <%  }%>
+    <div><h3><%=follower.name%></h3></div>
+</div>
